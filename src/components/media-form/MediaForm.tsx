@@ -64,8 +64,15 @@ const MediaForm: React.FC<MediaFormProps> = ({ onClose }) => {
                 required
             />
             <label htmlFor="medium">Medium:</label>
-            <select name="medium" id="medium" onChange={(e) => setMedium(e.target.value)} required>
-                <option value="Film">Movie</option>
+            <select 
+                name="medium" 
+                id="medium" 
+                value={medium}
+                onChange={(e) => 
+                setMedium(e.target.value)} 
+                required>
+                <option value='' disabled>Select</option>
+                <option value="Movie">Movie</option>
                 <option value="Show">Show</option>
                 <option value="Book">Book</option>
                 <option value="Misc">Other</option>
